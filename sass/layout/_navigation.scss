@@ -32,6 +32,7 @@
     }
 
     &__nav {
+        font-size: 0rem;
         visibility: hidden;
         height: 100vh;
         position: fixed;
@@ -95,9 +96,7 @@
         opacity: 1;
         width: 100%;
         visibility: visible;
-    }
-    &__checkbox:checked ~ &__nav &__list {
-        width: 100%;
+        font-size: inherit;
     }
 
 
