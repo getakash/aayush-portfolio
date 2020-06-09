@@ -1,0 +1,122 @@
+.card{
+    //functionality
+    perspective: 150rem;
+    height: 55rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    &--side{
+        background-color: $color-white;
+        height: 48rem;
+        color: white;
+        font-size: 2rem;
+        transition: transform 0.8s;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 4rem rgba($color-dark, 0.3);
+        &--front{
+            background-color: $color-white;
+        }
+        &--back{
+            transform: rotateY(180deg);
+
+            &--1{
+                background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+            }
+            &--2{
+                background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+            }
+            &--3{
+                background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+            }
+        }
+    }
+    
+    &:hover &--side--front{
+        transform: rotateY(-180deg);
+    }
+    &:hover &--side--back{
+        transform: rotateY(0);
+    }
+
+    //front side
+    &-image{
+        background-size: cover;
+        height: 23rem;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        &--1{
+            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(/nat-5.jpg);
+            background-blend-mode: screen;
+        }
+        &--2{
+            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark), url(/iit-bhu.jpg);
+            background-blend-mode: screen;
+        }
+        &--3{
+            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), url(/nat-7.jpg);
+            background-blend-mode: screen;
+        }
+    }
+    &-heading{
+        font-size: 2.8rem;
+        font-weight: 300;
+        color: $color-white;
+        text-align: right;
+        position: absolute;
+        text-transform: uppercase;
+        top: 12rem;
+        right: 2rem;
+        width: 65%;
+
+        &-span{
+            padding: 1rem 1.5rem;
+            -webkit-box-decoration-break: clone;
+            &--1{
+                background-image: linear-gradient(to right bottom, rgba($color-secondary-light,0.85), rgba($color-secondary-dark,0.85));
+            }
+            &--2{
+                background-image: linear-gradient(to right bottom, rgba($color-primary-light,0.85), rgba($color-primary-dark,0.85));
+            }
+            &--3{
+                background-image: linear-gradient(to right bottom, rgba($color-tertiary-light,0.85), rgba($color-tertiary-dark,0.85));
+            }
+        }
+    }
+
+    &-details{
+        margin-top: 2rem;
+        ul{
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+            li{
+                text-align: center;
+                color: $color-dark;
+                border-bottom: 1px solid $color-dark;
+                &:not(:last-child){margin-bottom: 2rem;}
+            }
+        }
+    }
+
+    &-back-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+        &--paragraph-1{
+            font-size: 2.5rem;
+            text-transform: center;
+        }
+        &--paragraph-2{
+            font-size: 5rem;
+            text-transform: center;
+        }
+    }
+}
+

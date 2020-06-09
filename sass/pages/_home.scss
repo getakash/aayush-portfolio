@@ -1,0 +1,107 @@
+.section-about{
+    background-color: $color-grey-light-1;
+    padding: 25rem 0;
+    margin-top: -20vh;
+    
+}
+
+.section-features{
+    padding: 20rem 0;
+    transform: skewY(-7deg);
+    margin-top: -9rem;
+    background-image: linear-gradient(to right bottom,rgba($color-primary-light,0.8),rgba($color-primary-dark,0.8)) ,url(/chutiya-102.jpg);
+    background-size: cover;
+     &>*{
+         transform: skewY(7deg);
+     }
+    
+}
+.section-main{
+    background-color: $color-grey-light-1;
+    padding: 25rem 0;
+    margin-top: -9rem;
+    @include respond(tab-port){
+        padding: 10rem 0;
+    }
+}
+.section-mailme{
+    margin-top: -12.5rem;
+    padding: 15rem 0;
+    background-image: linear-gradient(to right, $color-primary-light,$color-primary-dark);
+    
+}
+.mailme{
+    
+    background-image: linear-gradient(105deg, 
+                                    rgba($color-white,0.9) 0%,
+                                    rgba($color-white,0.9) 50%,
+                                    transparent 50%
+                                    ),url(/nat-10.jpg);
+
+    @include respond(tab-land){
+                background-image: linear-gradient(100deg, 
+                                    rgba($color-white,0.9) 0%,
+                                    rgba($color-white,0.9) 65%,
+                                    transparent 50%
+                                    ),url(/nat-10.jpg);
+                background-size: cover;
+            }
+    @include respond(tab-port){
+                background-image: linear-gradient(100deg, 
+                                    rgba($color-white,0.8) 0%,
+                                    rgba($color-white,0.8) 100%
+                                    ),url(/nat-10.jpg);
+                background-size: cover;
+            }
+    background-size: 100%;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-dark,0.4);
+
+    &--form{
+        width: 50%;
+        padding: 6rem;
+        @include respond(tab-land){
+                width: 65%;
+            }
+        @include respond(tab-port){
+                width: 100%;
+            }
+        
+    }
+}
+
+.socialmedia-nav{
+        position: fixed;
+        top: 5rem;
+        right: 5rem;
+        background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+        -webkit-background-clip: text;
+        z-index: 1000;
+        .socialmedia-icon:not(:last-child){
+            margin-right: 1rem;
+        }
+        .socialmedia-icon:link,
+        .socialmedia-icon:visited{
+            text-decoration: none;
+        }
+
+        .fab,
+        .fas{
+            font-size: 2.2rem;
+            color: transparent;
+        }
+        .fa-facebook-square{color: #082d7c;}
+        .fa-twitter{color: #2969f3;}
+        .fa-instagram{color: rgb(223, 12, 152);}
+    }
+
+    .logo-box{
+    position: fixed;
+    top: 2.5rem;
+    left: 3rem;
+    z-index: 1000;
+    }
+
+    .logo{
+        height: 10rem;
+    }
